@@ -9,7 +9,6 @@ using TechnicalTest.Business.Interfaces;
 using TechnicalTest.Repository;
 using TechnicalTest.Repository.Interfaces;
 using TechnicalTest.Utilities.Configs;
-using Config = TechnicalTest.Utilities.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,7 +48,7 @@ builder.Services.AddScoped<IEmployeeBusiness, EmployeeBusiness>();
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<IRoleBusiness, RoleBusiness>();
 
-builder.Services.AddScoped<Config.IAppConfig, AppConfig>();
+builder.Services.AddScoped<IAppConfig, AppConfig>();
 
 builder.Services.AddControllers().AddJsonOptions(x =>
     x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles); ;

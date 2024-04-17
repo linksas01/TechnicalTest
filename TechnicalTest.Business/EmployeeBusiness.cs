@@ -1,18 +1,18 @@
 ﻿using TechnicalTest.Business.Interfaces;
 using TechnicalTest.Models;
-using Enums = TechnicalTest.Models.Enums;
 using TechnicalTest.Repository.Interfaces;
+using TechnicalTest.Utilities.Configs;
 using TechnicalTest.Utilities.Exceptions;
-using Config = TechnicalTest.Utilities.Interfaces;
+using Enums = TechnicalTest.Models.Enums;
 
 namespace TechnicalTest.Business
 {
     public class EmployeeBusiness : IEmployeeBusiness
     {
-        private readonly Config.IAppConfig _config;
+        private readonly IAppConfig _config;
         private IEmployeeRepository _employeeRepository;
 
-        public EmployeeBusiness(Config.IAppConfig config, IEmployeeRepository employeeRepository)
+        public EmployeeBusiness(IAppConfig config, IEmployeeRepository employeeRepository)
         {
             _config = config;
             _employeeRepository = employeeRepository;

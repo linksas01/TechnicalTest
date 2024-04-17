@@ -1,4 +1,4 @@
-﻿namespace TechnicalTest.Utilities.Interfaces
+﻿namespace TechnicalTest.Utilities.Configs
 {
     public interface IAppConfig
     {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using TechnicalTest.Utilities.Interfaces;
+using TechnicalTest.Utilities.Configs;
 
 namespace TechnicalTest.Utilities.Configs
 {
